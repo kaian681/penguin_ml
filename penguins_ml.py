@@ -1,5 +1,6 @@
 import pickle
 
+import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -28,6 +29,7 @@ rfc = RandomForestClassifier(random_state=15)
 rfc.fit(x_train.values, y_train)
 y_pred = rfc.predict(x_test.values)
 score = accuracy_score(y_pred, y_test)
+score = round(score,2)
 print("Our accuracy score for this model is {}".format(score))
 
 
@@ -47,3 +49,6 @@ plt.xlabel("Importance")
 plt.ylabel("Feature")
 plt.tight_layout()
 fig.savefig("feature_importance.png")
+
+st.title('hello')
+
