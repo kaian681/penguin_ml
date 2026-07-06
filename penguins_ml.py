@@ -8,6 +8,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
+
+st.title('Penguin Classifier: A machine Learning App')
+st.write("This app uses 6 inputs to predict the species of penguin using"
+         "a modl built on the Palmer's Penguin's dataset. use the from below"
+         "to get started!")
+
 penguin_df = pd.read_csv("penguins.csv")
 penguin_df.dropna(inplace=True)
 output = penguin_df["species"]
@@ -50,7 +56,3 @@ plt.ylabel("Feature")
 plt.tight_layout()
 fig.savefig("feature_importance.png")
 
-st.title('hello')
-number = st.number_input(label='upload a number', min_value=0.0, max_value=1.0, value=.5)
-
-st.text(str(number))
