@@ -51,4 +51,6 @@ plt.tight_layout()
 fig.savefig("feature_importance.png")
 
 st.title('hello')
+number = st.number_input(label='upload a number', min_value=0.0, max_value=1.0, value=.5)
 
+st.text(str(number))
