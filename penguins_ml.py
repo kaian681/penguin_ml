@@ -18,6 +18,7 @@ password_guess = st.text_input("What is the Password?")
 if password_guess != "streamlit_is_great":
     st.stop()
 
+st.text('hey')
 penguin_df = pd.read_csv("penguins.csv")
 penguin_df.dropna(inplace=True)
 output = penguin_df["species"]
